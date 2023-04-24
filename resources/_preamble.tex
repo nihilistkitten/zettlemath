@@ -134,6 +134,8 @@
 \newcommand\@zf[2][]{\href{run:#2.pdf}{#1}}
 \newcommand\zf{\@dblarg\@zf}
 \makeatother
-% \newcommand{\zk}[2]{\href{run:#1.pdf}{#2}}
 
+\directlua{tags = {}}
+\renewcommand{\tag}[1]{\directlua{table.insert(tags, "#1")}}
+\newcommand{\printtags}{\directlua{tex.print(table.concat(tags, ", "))}}
 \begin{document}
