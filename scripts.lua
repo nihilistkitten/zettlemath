@@ -5,7 +5,7 @@ M.get_tags = function()
 		[[find notes -name "*.pdf" -exec pdfinfo "{}" \; | rg Keywords | tr -s ' ' | cut -d " " -f 2- | sed "s/, /\n/g" | sort | uniq]]
 	)
 	if not handle then
-		print("BIG ERROR")
+		print("error starting process")
 		print(handle)
 		os.exit(-1)
 	end
@@ -16,7 +16,5 @@ M.get_tags = function()
 	handle:close()
 	return ret
 end
-
-M.tags = M.get_tags()
 
 return M
