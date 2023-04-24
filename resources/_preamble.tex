@@ -1,6 +1,5 @@
 % !TEX TS-program = lualatex
 \documentclass{article}
-\title{Math}
 \author{Riley Shahar}
 
 \pagestyle{plain}
@@ -138,4 +137,6 @@
 \directlua{tags = {}}
 \renewcommand{\tag}[1]{\directlua{table.insert(tags, "#1")}}
 \newcommand{\printtags}{\directlua{tex.print(table.concat(tags, ", "))}}
+
+\directlua{scripts = require("scripts")}
 \begin{document}
