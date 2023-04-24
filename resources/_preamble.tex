@@ -1,3 +1,4 @@
+% !TEX TS-program = lualatex
 \documentclass{article}
 \title{Math}
 \author{Riley Shahar}
@@ -129,6 +130,10 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 % zettle things
-\newcommand{\zf}[1]{\href{run:#1.pdf}{#1}}
+\makeatletter
+\newcommand\@zf[2][]{\href{run:#2.pdf}{#1}}
+\newcommand\zf{\@dblarg\@zf}
+\makeatother
+% \newcommand{\zk}[2]{\href{run:#1.pdf}{#2}}
 
 \begin{document}
