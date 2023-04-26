@@ -122,7 +122,9 @@
 
 \def\pathto{\rightsquigarrow}
 
-\newcommand{\catname}[1]{{\normalfont\texttt{#1}}}
+\newcommand{\cat}[1]{{\normalfont\texttt{#1}}}
+\newcommand{\op}[1]{{{#1}^{\cat{op}}}}
+\newcommand{\opc}[1]{\op{\cat{#1}}}
 
 % https://tex.stackexchange.com/a/118217
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}

@@ -1,0 +1,28 @@
+\input{resources/_preamble.tex}
+
+\tag{category-theory}
+\tag{construction-on-category}
+
+The opposite \zf{category} is intuitively constructed by "reversing the arrows"
+of each of the arrows in an original category. Indeed, the syntax of category
+theory admits this kind of dual construction:
+
+\begin{dfn*}[Opposite Category]
+	Fix a category $\cat{C}$. The \emph{opposite category} $\opc{C}$ has
+	\begin{itemize}
+		\item The same objects as in $\cat{C}$.
+		\item For each morphism $f: X\rightarrow Y$ in $\cat{C}$, a morphism
+		      $\op{f}: Y\rightarrow X$ in $\opc{C}$.
+	\end{itemize}
+
+	Identities and composition work in the "obvious" way, i.e. $\op{\id_X}$ is the
+	identity of $X$ in $\opc{C}$, and
+	$X\xrightarrow{\op{f}}Y\xrightarrow{\op{g}}Z$ compose to $\op{(fg)}:
+		Z\rightarrow X$.
+\end{dfn*}
+
+This construction means that almost every theorem in category theory has a
+\emph{dual theorem} obtainable by purely mechanically reversing all the arrows
+in the proof.
+
+\input{resources/_postamble.tex}
