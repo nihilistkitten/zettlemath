@@ -1,0 +1,24 @@
+\input{resources/_preamble.tex}
+
+\tag{category}
+
+\begin{dfn*}
+	A \emph{group} is a set $G$ together with a binary operation satisfying:
+	\begin{itemize}
+		\item (Associativity): For any $a,b,c\in G$, $(ab)c = a(bc)$.
+		\item (Identity): There is an element $1_G\in G$ such that for any $a\in G$, $a1_G = a = 1_Ga$,
+		\item (Inverses): For any $a\in G$, there is an element $a^{-1}\in G$ such that
+		      $aa^{-1} = 1_G = a^{-1}a$.
+	\end{itemize}
+\end{dfn*}
+
+Groups can be \zf[categorified]{category}; see \zf{groupoid}.
+
+\begin{notation}
+	The identity is also written $e_G$. Groups are sometimes written additively,
+	in which case the identity is $0_G$ and inverses are $-a$.
+
+	Some authors include closure as a fourth axiom; I prefer thinking of it as a
+	restriction on the meaning of operation.
+\end{notation}
+\input{resources/_postamble.tex}
