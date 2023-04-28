@@ -142,5 +142,5 @@
 \renewcommand{\tag}[1]{\directlua{table.insert(tags, "#1")}}
 \newcommand{\printtags}{\directlua{tex.print(table.concat(tags, ", "))}}
 
-\directlua{scripts = require("scripts")}
+\directlua{scripts = require("resources/scripts")}
 \begin{document}

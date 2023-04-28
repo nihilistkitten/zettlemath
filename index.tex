@@ -1,7 +1,16 @@
 \input{resources/_preamble.tex}
 
 \directlua{%
-	tex.print(scripts.get_tags())
+	for _, tag in ipairs(scripts.list_tags()) do
+    tex.print(tag .. ":", "\par")
+    tex.print("\\begin{itemize}")
+    for _, file in ipairs(scripts.files_with_tag(tag)) do
+      tex.print("\\item \\zf{" .. scripts.strip_filename(file) .. "}", "\par")
+    end
+    tex.print("\\end{itemize}")
+    tex.print("", "\par")
+    tex.print("", "\par")
+  end
 }
 
 \end{document}
