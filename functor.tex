@@ -1,0 +1,27 @@
+\input{resources/_preamble.tex}
+
+\tag{category-theory}
+
+\begin{dfn*}[Functor]
+	A \emph{functor} $F: \cat{C}\rightarrow\cat{D}$ between
+	\zf[categories]{category} $\cat{C}$ and $\cat{D}$ consists of
+	\begin{itemize}
+		\item For each object $c\in\Obj{C}$, an object $Fc\in\Obj{D}$.
+		\item For each morphism $f\in\Map{C}$, a morphism $Ff\in\Map{D}$.
+	\end{itemize}
+
+	This data must preserve the categorical structure, i.e. domains, codomains,
+	identities and composites, that is
+
+	\begin{itemize}
+		\item For each $f\in\Map{C}$, $\dom(Ff) = F(\dom(f))$ and $\cod(Ff) =
+			      F(\cod(f))$.
+		\item For each $X\xrightarrow{f}Y\xrightarrow{g}Z\in \cat{C}$, $Fg\cdot Ff =
+			      F(g\cdot f)$.
+		\item For each $c\in\cat{C}$, $F(1_c) = 1_{Fc}$.
+	\end{itemize}
+
+\end{dfn*}
+
+
+\input{resources/_postamble.tex}
