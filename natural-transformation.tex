@@ -1,0 +1,31 @@
+\input{resources/_preamble.tex}
+
+\tag{category-theory}
+
+\begin{dfn*}[Natural Transformation]
+	A \emph{natural transformation} $\alpha: F\nat G$ between
+	\zf[functors]{functor} $F,G:\cat{C}\rightarrow\cat{D}$ consists of, for each
+	object $c\in\Obj{C}$, a morphism $\alpha_c: F_c\rightarrow G_c\in \cat{D}$.
+
+	This data must preserve morphisms in $\cat{C}$, in the sense that for
+	any morphism $f: c\rightarrow c'\in\cat{C}$, the square
+
+	\begin{figure}[H]
+		\centering
+		\begin{tikzcd}
+			Fc & Gc \\
+			Fc' & Gc'
+			\arrow["Ff", from=1-1, to=2-1, swap]
+			\arrow["\alpha_c", from=1-1, to=1-2]
+			\arrow["\alpha_{c'}", from=2-1, to=2-2, swap]
+			\arrow["Gf"', from=1-2, to=2-2, swap]
+		\end{tikzcd}
+	\end{figure}
+
+	must commute.
+
+	The morphisms $\alpha_c$ are called the \emph{components} of the natural
+	transformation.
+\end{dfn*}
+
+\input{resources/_postamble.tex}

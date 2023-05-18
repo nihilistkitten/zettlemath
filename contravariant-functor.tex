@@ -1,0 +1,31 @@
+\input{resources/_preamble.tex}
+
+\tag{category-theory}
+
+\begin{dfn*}[Contravariant Functor]
+	A \emph{contravariant functor} $F$ between
+	\zf[categories]{category} $\cat{C}$ and $\cat{D}$ is a \zf{functor} $F:
+		\opc{C}\rightarrow\cat{D}$.
+\end{dfn*}
+
+Functors are generally covariant unless specified.
+
+It is convenient to think of contravariant functors as operating directly on
+$\cat{C}$, but reversing the direction of arrows. The following diagram is from
+Riehl:
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzcd}
+		\opc{C} && \cat{D} \\
+		c & \mapsto & Fc \\
+		& \mapsto \\
+		{c'} & \mapsto & {Fc'}
+		\arrow["F", from=1-1, to=1-3]
+		\arrow["f"', from=2-1, to=4-1]
+		\arrow["Ff"', from=4-3, to=2-3]
+	\end{tikzcd}
+\end{figure}
+
+\input{resources/_postamble.tex}
+
